@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+</head>
+<body>
+    <h1>Tableau de Bord</h1>
+    <p>Total des ventes : {{ total_ventes }} €</p>
+    <p>Stock restant : {{ total_produits }}</p>
+    <a href="{% url 'liste_produits' %}">Gérer les Produits</a>
+    <a href="{% url 'liste_ventes' %}">Voir les Ventes</a>
+</body>
+</html>
