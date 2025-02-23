@@ -1,0 +1,28 @@
+{% extends 'gestion/base.html' %}
+{% block title %}🔧 Modifier le Produit{% endblock %}
+{% block content %}
+<h2 class="text-center neon-title">✏️ Modifier {{ produit.nom }}</h2>
+
+<form method="POST" class="styled-form">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="id_nom">Nom</label>
+    {{ form.nom }}
+  </div>
+  <div class="form-group">
+    <label for="id_categorie">Catégorie</label>
+    {{ form.categorie }}
+  </div>
+  <div class="form-group">
+    <label for="id_prix">Prix (€)</label>
+    {{ form.prix }}
+  </div>
+  <div class="form-group">
+    <label for="id_stock">Stock</label>
+    {{ form.stock }}
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block">Sauvegarder ✅</button>
+  <a href="{% url 'liste_produits' %}" class="btn btn-secondary btn-block">Annuler ❌</a>
+</form>
+{% endblock %}

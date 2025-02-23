@@ -1,0 +1,19 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #f8f9fa;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

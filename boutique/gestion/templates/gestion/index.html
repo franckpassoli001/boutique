@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-</head>
-<body>
-    <h1>Bienvenue sur l'application de gestion de boutique</h1>
-    <ul>
-        <li><a href="{% url 'admin:index' %}">🔧 Accéder à l'Admin</a></li>
-        <li><a href="{% url 'liste_produits' %}">📦 Gérer les Produits</a></li>
-        <li><a href="{% url 'liste_ventes' %}">🛒 Gérer les Ventes</a></li>
-        <li><a href="{% url 'dashboard' %}">📊 Voir le Tableau de Bord</a></li>
-    </ul>
-</body>
-</html>
+{% extends 'gestion/base.html' %}
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-3 fw-bold text-primary">Bienvenue sur Boutique Frakreativ</h1>
+    <p class="lead">Gérez vos produits et ventes en un seul clic.</p>
+    <a href="{% url 'liste_produits' %}" class="btn btn-success btn-lg mt-3">Explorer les Produits</a>
+</div>
+<script>
+    gsap.from("h1", { opacity: 0, y: -50, duration: 1, ease: "bounce" });
+</script>
+{% endblock %}

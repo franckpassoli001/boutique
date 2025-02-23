@@ -1,0 +1,23 @@
+{% extends 'gestion/base.html' %}
+{% block title %}Tableau de Bord{% endblock %}
+{% block content %}
+<h2 class="mb-4">Tableau de Bord</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card text-white bg-success mb-3">
+      <div class="card-header">Total des Ventes</div>
+      <div class="card-body">
+        <h5 class="card-title">{{ total_ventes }} €</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card text-white bg-info mb-3">
+      <div class="card-header">Total du Stock</div>
+      <div class="card-body">
+        <h5 class="card-title">{{ total_produits }}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
