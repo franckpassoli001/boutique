@@ -84,13 +84,14 @@ def supprimer_produit(request, produit_id):
 
 def modifier_vente(request, vente_id):
     vente = get_object_or_404(Vente, id=vente_id)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = VenteForm(request.POST, instance=vente)
         if form.is_valid():
             form.save()
-            return redirect('liste_ventes')
+            return redirect('liste_ventes')  # Redirige vers la liste des ventes
     else:
         form = VenteForm(instance=vente)
+
     return render(request, 'gestion/modifier_vente.html', {'form': form, 'vente': vente})
 
 def supprimer_vente(request, vente_id):

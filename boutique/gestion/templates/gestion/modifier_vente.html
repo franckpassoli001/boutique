@@ -1,0 +1,27 @@
+{% extends 'gestion/base.html' %}
+{% block title %}Modifier une Vente{% endblock %}
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="text-center">✏ Modifier la Vente</h2>
+    
+    <form method="POST" class="shadow p-4 bg-light rounded mt-4">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="id_produit" class="form-label">Produit</label>
+            {{ form.produit }}
+        </div>
+        
+        <div class="mb-3">
+            <label for="id_quantite" class="form-label">Quantité</label>
+            {{ form.quantite }}
+        </div>
+
+        <button type="submit" class="btn btn-success">💾 Enregistrer</button>
+        <a href="{% url 'liste_ventes' %}" class="btn btn-secondary">❌ Annuler</a>
+    </form>
+</div>
+
+
+{% endblock %}

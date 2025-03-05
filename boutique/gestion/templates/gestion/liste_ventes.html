@@ -28,9 +28,8 @@
                 <td>{{ vente.prix_total }}€</td>
                 <td>{{ vente.date_vente }}</td>
                 <td>
-                    <a href="{% url 'modifier_vente' vente.id %}" class="btn btn-warning btn-sm">
-                        <i class="fas fa-edit"></i> Modifier
-                    </a>
+                    <a href="{% url 'modifier_vente' vente.id %}" class="btn btn-warning">✏ Modifier</a>
+
                     <a href="{% url 'supprimer_vente' vente.id %}" class="btn btn-danger btn-sm">
                         <i class="fas fa-trash"></i> Supprimer
                     </a>

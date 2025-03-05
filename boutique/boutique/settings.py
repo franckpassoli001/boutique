@@ -54,10 +54,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'boutique.urls'
 
 TEMPLATES = [
-    
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [BASE_DIR / "gestion/templates"],  # Assure-toi que ton chemin est correct
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +68,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'boutique.wsgi.application'
 
